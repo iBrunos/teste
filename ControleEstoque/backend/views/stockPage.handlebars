@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html class="storage__html">
+    <head>
+        <meta charset="UTF-8">
+        <title>Happy Makeup | Storage</title>
+        <link rel="stylesheet" href="../styles/style.css" />
+        <script src="../scripts/logout.js" defer></script>
+        <script src="../scripts/productsPost.js" defer></script>
+        <script src="../scripts/switch.js" defer></script>
+    </head>
+    <body class="storage__body">
+        <nav class="menu">
+            <h3 class="menu__title">HAPPY MAKEUP</h3>
+            <button
+                type="button"
+                class="menu__logout"
+                id="viewStock"
+                onclick="toggle_visibility(viewStock)"
+              >
+                <div class="menu__logout--text">
+                    <img src="../imgs/iconStock.svg" alt="icone" class="icon1">
+                    Visualizar Estoque
+                </div>
+            </button>
+            <button
+                type="button"
+                class="menu__logout"
+                id="viewUsers"
+                onclick="toggle_visibility(viewUsers)";
+              >
+                <div class="menu__logout--text">
+                    <img src="../imgs/iconUser2.svg" alt="icone" class="icon2">
+                    Configurar Usuários
+                </div>
+            </button>
+            <button
+                type="button"
+                class="menu__logout"
+                id="buttonLogout"
+              >
+              <div class="menu__logout--text">
+                <img src="../imgs/iconExit.svg" alt="icone" class="icon3">
+                Realizar Logout
+            </div>
+            </button>
+        </nav>
+        <section class="dashboard1">
+            <header class="header">
+                <div class="searchbar">
+                    <input type="search" name="Search" id="search" placeholder="Pesquisar" class="search">
+                    <button class="search__button">
+                        <img src="../imgs/iconSearch.svg" alt="" class="icon4">
+                    </button>
+                </div>
+                <div class="header__user">
+                    <img src="../imgs/iconUser3.svg" alt="Foto do usuário" class="header__user--photo">
+                    <h4 class="header__user--name">Admin</h4>
+                </div>
+            </header>
+            
+            <section class="dashboard2">
+                <main class="storage__items">
+                    <section>
+                        <div>
+                            <form action = "http://localhost:3000/products" method="GET" class="insert__form">
+                                <section class="insert__fieldset" id="root">
+                                    <section>
+                                    </section>
+                                </section>
+                            </form>
+                        </div>
+                    </section>
+                </main>
+                
+                <main class="insert__items">
+                    <section>
+                        <div class="post__items">
+                            <form action = "http://localhost:3000/register/products" method="POST" class="insert__form" id="">
+                                <section class="insert__fieldset">
+                                    <h1 class="legend"></h1>
+                                    <div class="insert__form--card">
+                                        <label for="product" class="margin">Produto:</label>
+                                        <input name="product" id="product" type="text" placeholder="Nome do produto" class="margin">
+                                        <br>
+                                        <label for="price" class="margin">Preço:</label>
+                                        <input name="price" id="price" type="text" placeholder="Preço do produto" class="margin">
+                                        <br>
+                                        <label for="amount" class="margin">Quantidade:</label>
+                                        <input name="amount" id="amount" type="text" placeholder="Quantidade do produto" class="margin">
+                                        <br>
+                                        <label for="brand" class="margin">Marca:</label>
+                                        <input name="brand" id="brand" type="text" placeholder="Marca do produto" class="margin">
+                                        <br>
+                                        <label for="description" class="margin">Descrição:</label>
+                                        <input name="description" id="description" type="text" placeholder="Descrição do produto" class="margin">
+                                        <br>
+                                        <button class="margin" type="submit" ><span>Inserir</span></button>
+                                    </div>
+                                </section>
+                            </form>
+                        </div>
+                    </section>
+                            <div class="post__users">
+                                <form action = "http://localhost:3000/users/register" method="POST" class="insert__form" id="">
+                                    <fieldset class="insert__fieldset">
+                                        <legend >
+                                            <h1 class="legend">Cadastrando um usuario</h1>
+                                        </legend >
+                                        <label for="usuario">Usuário</label>
+                                        <input name="usuario" id="usuario" type="text" placeholder="Nome do Usuário">
+                                        <br>
+                                        <label for="senha">Senha</label>
+                                        <input name="senha" id="senha" type="password" placeholder="Crie uma senha">
+                                        <br>
+                                        <label for="nivel">Nivel</label>
+                                        <input name="nivel" id="nivel" type="number" placeholder="Nivel de acesso">
+                                        <br>
+                                        <button class="button" style="vertical-align:middle" type="submit"><span>Cadastrar </span></button>
+                                    </fieldset>
+                                </form>
+                            </div>
+                </main>
+            </section>
+        </section>
+    </body>
+</html>
